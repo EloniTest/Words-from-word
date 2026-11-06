@@ -4,11 +4,10 @@ test
 
 ## Requirements
 
-test
+- Java 8 or newer
+- Gson 2.11.0 (included in `lib/`)
 
 ## Build & Run
-
-test
 
 ## Authors
 

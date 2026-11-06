@@ -1,3 +1,8 @@
 {
-    "cmake.sourceDirectory": "a:/kazah project/cpp"
+    "java.project.sourcePaths": ["java"],
+    "java.project.outputPath": "output",
+    "java.project.referencedLibraries": [
+        "lib/gson-2.11.0.jar"
+    ],
+    "java.debug.settings.onBuildFailureProceed": true
 }
