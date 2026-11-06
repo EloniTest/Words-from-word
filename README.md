@@ -1,18 +1,7 @@
-# Words from word — Level Generator
-
-test
+# Words from word — level generator
 
 ## Requirements
 
-- Java 8 or newer
-- Gson 2.11.0 (included in `lib/`)
+## How to run
 
-## Build & Run
 
-## Authors
-
-test
-
-## License
-
-test
