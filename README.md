@@ -14,6 +14,7 @@
     * paste path like ```C:\Program Files\Apache\maven\bin```
     * save and close
 4) check it's version in powershell: ```mvn -v```(should version of Maven appear)
+5) 
 
 ### Run
 
