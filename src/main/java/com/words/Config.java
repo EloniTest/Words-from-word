@@ -42,7 +42,7 @@ public class Config {
     }
 
 
-    static class result {
+    static class Result {
         List<level> result;
         result(List<level> levels) {
             this.result = levels;
