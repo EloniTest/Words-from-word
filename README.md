@@ -19,6 +19,7 @@ A module that builds game levels in JSON format from a list of Russian words (di
 5) go to the cloned repository to build the project; to do this, run the command ```mvn clean compile```
 ### Run
 
+To run the project in the terminal, you need to write and execute a command ```mvn exec::java```
 
 ## How this algorithm working?
 
