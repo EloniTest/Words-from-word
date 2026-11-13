@@ -2,11 +2,11 @@
 
 A module that builds game levels in JSON format from a list of Russian words (dictionary) and a list of main words. Each level has a main word, a set of sub-words, a difficulty level, and the minimum number of sub-words needed to pass.
 
-## Requirements
+# Requirements
 * JDK 17+
 * Maven 3.9.x+
-## How to build and run
-### Build
+# How to build and run
+## Build
 1) check your java:```java --version```
 2) download Maven and unpack it (https://maven.MMVapache.org/download.cgi)
 3) add Maven to PATH:
@@ -17,11 +17,11 @@ A module that builds game levels in JSON format from a list of Russian words (di
     * save and close
 4) check it's version in powershell: ```mvn -v```(should version of Maven appear)
 5) go to the cloned repository to build the project; to do this, run the command ```mvn clean compile```
-### Run
+## Run
 
 To run the project in the terminal, you need to write and execute a command ```mvn exec::java```
 
-## How this algorithm working?
+# How this algorithm working?
 
 The algorithm reads several JSON files, calls a method of the Service class, and saves the result. Here is the description in the same order as your notes.
 
@@ -59,13 +59,13 @@ The algorithm reads several JSON files, calls a method of the Service class, and
 
    Plus the thresholds from `config.json`:
 
-   "easyMaxMainWordLength": 7,
+   "easyMaxMainWordLength" : 7,
 
-   "mediumMaxMainWordLength": 10,
+   "mediumMaxMainWordLength" : 10,
 
-   "easyMaxSubWords": 15,
+   "easyMaxSubWords" : 15,
 
-   "mediumMaxSubWords": 30
+   "mediumMaxSubWords" : 30
 
    Rule: 
 
@@ -84,7 +84,7 @@ The algorithm reads several JSON files, calls a method of the Service class, and
    an instance of the level class is created
 
    fields: `id`, `main_word`, `difficulty`, `minWordsToPass`, `sub3Wordlist`
-## License
+# License
 
-~desc
+This project have MIT license 
 
