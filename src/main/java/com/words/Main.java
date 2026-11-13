@@ -29,7 +29,8 @@ public class Main {
         List<String> dict;
         List<String> main_words;
 
-        Gson gson = new GsonBuilder().create();
+        // .setPrettyPrinting() for BEAUTIFUL! .json file
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
         Path base = Path.of("").toAbsolutePath();
 
         // for reading List<String>
