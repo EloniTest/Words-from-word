@@ -23,8 +23,67 @@ To run the project in the terminal, you need to write and execute a command ```m
 
 ## How this algorithm working?
 
-~desc
+The algorithm reads several JSON files, calls a method of the Service class, and saves the result. Here is the description in the same order as your notes.
 
+1. File Reading
+
+   reads `config.json`, reads `main_words.json`, reads `dict.json`
+
+2. Method Call
+
+   calls the `generateLevels` method of the `Service` class
+
+3. Saving the Result
+
+   saves the result to `output.json`
+
+4. Processing `dict.json` (Stream API)
+
+   all words are converted to a single case (`Ё → Е`)
+
+   words whose length is `>= minSubWordLength` are kept
+
+   duplicates are removed
+
+5. Processing `main_words.json`
+
+   words are converted to a single case
+
+   words from `dict.json` are searched according to the rules in `config.json`
+
+   if the number of found sub-words is `< minWordsToPass`, the level is not created
+
+6. Calculating Difficulty
+
+   Two parameters are used: the length of the main word and the number of found sub-words
+
+   Plus the thresholds from `config.json`:
+
+   "easyMaxMainWordLength": 7,
+
+   "mediumMaxMainWordLength": 10,
+
+   "easyMaxSubWords": 15,
+
+   "mediumMaxSubWords": 30
+
+   Rule: 
+
+   main word length `<= easyMaxMainWordLength` -> EASY
+   
+   number of sub-words `<= easyMaxSubWords` -> EASY
+   
+   main word length `<= mediumMaxMainWordLength` -> MEDIUM
+   
+   number of sub-words `<= mediumMaxSubWords` -> MEDIUM
+   
+   if none of the conditions are met -> automatically HARD
+
+7. Building the Level
+
+   an instance of the level class is created
+
+   fields: `id`, `main_word`, `difficulty`, `minWordsToPass`, `sub3Wordlist`
 ## License
 
 ~desc
