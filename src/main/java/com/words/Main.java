@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder;
 // read and write
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.nio.file.Files;
 
 // collections
 import java.util.*;
@@ -47,6 +48,17 @@ public class Main {
             dict = gson.fromJson(reader,listType);
             System.out.println("dictionary.json - success readed");
         }
+
+        Config.Result result = Service.generateLevels(dict,main_words,config);
+        Path out_file = base.resolve("output/output.json");
+        Files.createDirectories(out_file.getParent());
+
+        try(FileWriter writer = new FileWriter(out_file.toFile(),StandardCharsets.UTF_8)) {
+            gson.toJson(result,writer);
+        }
+
+        System.out.println("file is ready!");
+        System.out.println("levels generated: " + result.levels.size());
 
 
     }

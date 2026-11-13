@@ -8,7 +8,7 @@
 ## How to build and run
 ### Build
 1) check your java:```java --version```
-2) download Maven and unpack it
+2) download Maven and unpack it (https://maven.apache.org/download.cgi)
 3) add Maven to PATH:
     * search "Modifying System Environment Variables"
     * click environment variables

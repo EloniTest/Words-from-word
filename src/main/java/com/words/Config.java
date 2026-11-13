@@ -41,11 +41,11 @@ public class Config {
         }
     }
 
-
+    // bug fixed
     static class Result {
-        List<level> result;
-        result(List<level> levels) {
-            this.result = levels;
+        List<level> levels;
+        Result(List<level> levels) {
+            this.levels = levels;
         }
     }
     // --- output generation ---
