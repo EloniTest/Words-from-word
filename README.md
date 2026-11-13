@@ -24,6 +24,7 @@ Java module that generates game levels in JSON format from a Russian word dictio
 
 To run the project in the terminal, you need to write and execute a command ```mvn exec::java```
 
+---
 ## How this algorithm working?
 1) Reads `config.json`, `data/main_words.json`, `data/dict.json`
 2) All words in dict are converted to a single case (`Ё → Е`)
@@ -93,6 +94,8 @@ dict.json
 ![img.png](scr/img.png)
 
 ![img_1.png](scr/img_1.png)
+
+---
 
 ## License
 
